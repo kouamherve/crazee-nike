@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="App">
-      <h1>Crazee-nike</h1>
-    </div>
-  );
+  return <h1>Crazee-nike</h1>;
 }
 
 export default App;
