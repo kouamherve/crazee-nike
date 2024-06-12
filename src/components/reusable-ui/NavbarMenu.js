@@ -1,7 +1,15 @@
 import { VscClose } from "react-icons/vsc";
 import { GoChevronLeft } from "react-icons/go";
+import { useContext } from "react";
+import MenuContext from "../../context/MenuContext";
 
-export default function NavbarMenu({ isShow, setIsShow, children, isHome }) {
+export default function NavbarMenu({ children, isHome }) {
+  // States
+  const { isShow, setIsShow } = useContext(MenuContext);
+
+  // Handlers
+
+  // Render
   return (
     <div
       className={`${

@@ -5,9 +5,14 @@ import AllMenuFooter from "./AllMenuFooter";
 import { allMenus } from "./utils";
 import NavbarMenu from "../../reusable-ui/NavbarMenu";
 
-export default function AllMenu({ isShow, setIsShow }) {
+export default function AllMenu() {
+  // States
+
+  // Handlers
+
+  // Render
   return (
-    <NavbarMenu isShow={isShow} setIsShow={setIsShow} isHome="homepage">
+    <NavbarMenu isHome="homepage">
       <div className="mt-4 py-6">
         <ul className=" text-2xl space-y-3">
           {allMenus.map((menu) => (
