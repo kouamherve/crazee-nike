@@ -1,7 +1,7 @@
-import Navbar from "./components/pages/navbar/Navbar";
+import Homepage from "./components/pages/Homepage";
 
 function App() {
-  return <Navbar />;
+  return <Homepage />;
 }
 
 export default App;

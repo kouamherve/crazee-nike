@@ -1,25 +1,13 @@
-import { VscClose } from "react-icons/vsc";
 import { RxChevronRight } from "react-icons/rx";
 import ExtraProduct from "../../reusable-ui/ExtraProduct";
 import AllMenuForm from "./AllMenuForm";
 import AllMenuFooter from "./AllMenuFooter";
 import { allMenus } from "./utils";
+import NavbarMenu from "../../reusable-ui/NavbarMenu";
 
 export default function AllMenu({ isShow, setIsShow }) {
   return (
-    <div
-      className={`${
-        isShow
-          ? "absolute top-0 right-0 bg-white w-80 min-h-screen pr-6 pl-9"
-          : "hidden"
-      } `}
-    >
-      <div className="text-3xl py-5 w-full flex items-center justify-end">
-        <VscClose
-          onClick={() => setIsShow(false)}
-          className=" cursor-pointer"
-        />
-      </div>
+    <NavbarMenu isShow={isShow} setIsShow={setIsShow} isHome="homepage">
       <div className="mt-4 py-6">
         <ul className=" text-2xl space-y-3">
           {allMenus.map((menu) => (
@@ -36,6 +24,6 @@ export default function AllMenu({ isShow, setIsShow }) {
       </div>
       <AllMenuForm />
       <AllMenuFooter />
-    </div>
+    </NavbarMenu>
   );
 }
