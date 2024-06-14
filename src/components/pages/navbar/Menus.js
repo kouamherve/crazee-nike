@@ -6,6 +6,7 @@ import MenuContext from "../../../context/MenuContext";
 export default function Menus() {
   // States
   const { setIsShow } = useContext(MenuContext);
+
   return (
     <div className="flex gap-4 text-gray-800">
       <div className=" text-[22px]">

@@ -2,6 +2,7 @@ import { VscClose } from "react-icons/vsc";
 import { GoChevronLeft } from "react-icons/go";
 import { useContext } from "react";
 import MenuContext from "../../context/MenuContext";
+import { Link } from "react-router-dom";
 
 export default function NavbarMenu({ children, isHome }) {
   // States
@@ -24,10 +25,12 @@ export default function NavbarMenu({ children, isHome }) {
         }`}
       >
         {isHome !== "homepage" && (
-          <div className="flex items-center gap-2 -translate-x-5">
-            <GoChevronLeft className=" text-2xl" />
-            <span className=" text-lg font-medium">All</span>
-          </div>
+          <Link>
+            <div className="flex items-center gap-2 -translate-x-5">
+              <GoChevronLeft className=" text-2xl" />
+              <span className=" text-lg font-medium">All</span>
+            </div>
+          </Link>
         )}
         <div>
           <VscClose
