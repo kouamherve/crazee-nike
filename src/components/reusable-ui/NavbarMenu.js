@@ -32,8 +32,8 @@ export default function NavbarMenu({ children, isHome }) {
             </div>
           </Link>
         )}
-        <div>
-          <VscClose onClick={handleClose} className=" cursor-pointer" />
+        <div onClick={handleClose}>
+          <VscClose className=" cursor-pointer" />
         </div>
       </div>
       {children}

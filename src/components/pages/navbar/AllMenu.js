@@ -10,7 +10,7 @@ import MenuContext from "../../../context/MenuContext";
 export default function AllMenu() {
   const [content, setContent] = useState("");
   const { isHidden, setIsHidden } = useContext(MenuContext);
-  if (isHidden) return <NavbarMenu isHome="homepage">{content}</NavbarMenu>;
+  if (isHidden) return <NavbarMenu isHome="other">{content}</NavbarMenu>;
 
   return (
     <NavbarMenu isHome="homepage">
@@ -22,7 +22,7 @@ export default function AllMenu() {
                 <div
                   onClick={() => {
                     setIsHidden(true);
-                    setContent(menu.title);
+                    setContent(menu.content);
                   }}
                   className="flex items-center justify-between"
                 >
