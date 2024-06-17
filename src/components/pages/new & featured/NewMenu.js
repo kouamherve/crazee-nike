@@ -13,7 +13,7 @@ export default function NewMenu() {
       <Link className=" py-2 text-[22px] ">New & Featured</Link>
       <div className=" pt-8 pb-40 text-base text-secondary">
         <div className="flex flex-col gap-5">
-          <Link>New Arrival</Link>
+          <Link>New Arrivals</Link>
           <Link>Up to 50 % Off Select Style </Link>
         </div>
         <ul className=" py-5 space-y-5">
