@@ -7,4 +7,6 @@ export default createContext({
   setIsMenuPageShow: () => {},
   isHidden: false,
   setIsHidden: () => {},
+  isActiveMenu: false,
+  setIsActiveMenu: () => {},
 });

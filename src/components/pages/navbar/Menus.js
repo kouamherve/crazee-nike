@@ -4,8 +4,11 @@ import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Menus() {
-  // States
-  const { setIsShow } = useContext(MenuContext);
+  const { setIsShow, isActiveMenu, setIsActiveMenu } = useContext(MenuContext);
+  const handleClic = () => {
+    setIsShow(true);
+    setIsActiveMenu(true);
+  };
 
   return (
     <div className="flex gap-4 text-gray-800">
@@ -18,8 +21,8 @@ export default function Menus() {
       <div className=" text-[22px]">
         <IoBagOutline />
       </div>
-      <div onClick={() => setIsShow(true)} className=" text-[25px]">
-        <FiMenu className=" cursor-pointer" />
+      <div onClick={handleClic} className=" text-[25px]">
+        <FiMenu className={`${isActiveMenu ? "hidden" : "cursor-pointer"}`} />
       </div>
     </div>
   );

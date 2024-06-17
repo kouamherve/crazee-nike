@@ -5,17 +5,19 @@ import MenuContext from "../../context/MenuContext";
 import { Link } from "react-router-dom";
 
 export default function NavbarMenu({ children, isHome }) {
-  const { isShow, setIsShow, setIsHidden } = useContext(MenuContext);
+  const { isShow, setIsShow, setIsHidden, setIsActiveMenu } =
+    useContext(MenuContext);
 
   const handleClose = () => {
     setIsShow(false);
     setIsHidden(false);
+    setIsActiveMenu(false);
   };
   return (
     <div
       className={`${
         isShow
-          ? "absolute top-0 right-0 bg-gray-100 w-80 min-h-screen px-6"
+          ? "z-30 font-Montserrat absolute top-0 right-0 bg-white w-80 min-h-screen px-6 overflow-y-auto"
           : "hidden"
       } `}
     >
