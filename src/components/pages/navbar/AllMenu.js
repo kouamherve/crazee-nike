@@ -4,12 +4,12 @@ import AllMenuForm from "./AllMenuForm";
 import AllMenuFooter from "./AllMenuFooter";
 import { allMenus } from "./helpers";
 import NavbarMenu from "../../reusable-ui/NavbarMenu";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import MenuContext from "../../../context/MenuContext";
 
 export default function AllMenu() {
-  const [isHidden, setIsHidden] = useState(false);
   const [content, setContent] = useState("");
-
+  const { isHidden, setIsHidden } = useContext(MenuContext);
   if (isHidden) return <NavbarMenu isHome="homepage">{content}</NavbarMenu>;
 
   return (

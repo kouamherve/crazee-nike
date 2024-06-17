@@ -5,6 +5,7 @@ import MenuContext from "../../context/MenuContext";
 export default function Homepage() {
   // States
   const [isShow, setIsShow] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isMenuPageShow, setIsMenuPageShow] = useState(false);
 
   const menuContextValue = {
@@ -12,6 +13,8 @@ export default function Homepage() {
     setIsShow,
     isMenuPageShow,
     setIsMenuPageShow,
+    isHidden,
+    setIsHidden,
   };
 
   // Handlers

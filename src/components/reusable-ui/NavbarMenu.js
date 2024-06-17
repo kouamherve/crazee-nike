@@ -5,12 +5,12 @@ import MenuContext from "../../context/MenuContext";
 import { Link } from "react-router-dom";
 
 export default function NavbarMenu({ children, isHome }) {
-  // States
-  const { isShow, setIsShow } = useContext(MenuContext);
+  const { isShow, setIsShow, setIsHidden } = useContext(MenuContext);
 
-  // Handlers
-
-  // Render
+  const handleClose = () => {
+    setIsShow(false);
+    setIsHidden(false);
+  };
   return (
     <div
       className={`${
@@ -33,10 +33,7 @@ export default function NavbarMenu({ children, isHome }) {
           </Link>
         )}
         <div>
-          <VscClose
-            onClick={() => setIsShow(false)}
-            className=" cursor-pointer"
-          />
+          <VscClose onClick={handleClose} className=" cursor-pointer" />
         </div>
       </div>
       {children}

@@ -5,4 +5,6 @@ export default createContext({
   setIsShow: () => {},
   isMenuPageShow: false,
   setIsMenuPageShow: () => {},
+  isHidden: false,
+  setIsHidden: () => {},
 });
