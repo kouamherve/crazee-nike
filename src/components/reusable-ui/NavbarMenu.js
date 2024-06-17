@@ -15,7 +15,7 @@ export default function NavbarMenu({ children, isHome }) {
     <div
       className={`${
         isShow
-          ? "absolute top-0 right-0 bg-white w-80 min-h-screen pr-6 pl-9"
+          ? "absolute top-0 right-0 bg-gray-100 w-80 min-h-screen px-6"
           : "hidden"
       } `}
     >
@@ -26,7 +26,7 @@ export default function NavbarMenu({ children, isHome }) {
       >
         {isHome !== "homepage" && (
           <Link>
-            <div className="flex items-center gap-2 -translate-x-5">
+            <div className="flex items-center gap-2 -translate-x-4">
               <GoChevronLeft className=" text-2xl" />
               <span className=" text-lg font-medium">All</span>
             </div>
