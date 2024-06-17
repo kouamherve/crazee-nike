@@ -4,7 +4,7 @@ export default function AllMenuForm() {
   return (
     <form className=" py-12">
       <div>
-        <p className=" text-xl text-secondary font-medium">
+        <p className=" text-lg text-secondary font-medium">
           Become a C-N member for the best products, inspiration and stories in
           sport.{" "}
           <span className=" text-black">

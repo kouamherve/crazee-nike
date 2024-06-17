@@ -1,12 +1,22 @@
 import { Link, useParams } from "react-router-dom";
 import { VscClose } from "react-icons/vsc";
 import { GoChevronLeft } from "react-icons/go";
+import { useContext } from "react";
+import MenuContext from "../../context/MenuContext";
 
 export default function MenuPages() {
+  const { isMenuPageShow, setIsMenuPageShow } = useContext(MenuContext);
+
   const { menuId } = useParams();
+  //console.log(menuId);
+
   return (
     <div
-      className={`${"absolute top-0 right-0 bg-white w-80 min-h-screen pr-6 pl-9"} `}
+      className={`${
+        isMenuPageShow
+          ? "absolute top-0 right-0 bg-white w-80 min-h-screen pr-6 pl-9"
+          : "hidden"
+      } `}
     >
       <div
         className={`text-3xl py-5 w-full flex items-center justify-between
@@ -19,7 +29,7 @@ export default function MenuPages() {
           </div>
         </Link>
 
-        <div>
+        <div onClick={() => setIsMenuPageShow(false)}>
           <VscClose className=" cursor-pointer" />
         </div>
       </div>

@@ -18,8 +18,8 @@ export default function Menus() {
       <div className=" text-[22px]">
         <IoBagOutline />
       </div>
-      <div className=" text-[25px]">
-        <FiMenu onClick={() => setIsShow(true)} className=" cursor-pointer" />
+      <div onClick={() => setIsShow(true)} className=" text-[25px]">
+        <FiMenu className=" cursor-pointer" />
       </div>
     </div>
   );
