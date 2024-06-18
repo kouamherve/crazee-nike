@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./navbar/Navbar";
 import MenuContext from "../../context/MenuContext";
 import AllMenu from "./navbar/AllMenu";
+import HomeCard from "../reusable-ui/HomeCard";
 
 export default function Homepage() {
   // States
@@ -46,10 +47,32 @@ export default function Homepage() {
                 connection between Hoop and Hip Hop with their own custom
                 versions of the KD17.
               </p>
-              <button className=" my-5 px-4 py-2 bg-black text-white font-bold rounded-full border-2 border-black/60">
+              <button className=" my-5 px-4 py-2 bg-black text-white font-medium rounded-full border-2 border-black/60">
                 Shop
               </button>
             </div>
+          </section>
+          <section>
+            <HomeCard
+              detail="Just Dropped"
+              title="The Aura Bag"
+              image="https://cdn.pixabay.com/photo/2016/08/30/14/10/bag-1630852_1280.jpg"
+            />
+            <HomeCard
+              detail="New Arrivals"
+              title="Air Jordan 4 'Oxydized Green'"
+              image="https://cdn.pixabay.com/photo/2017/04/08/16/16/kicks-2213619_1280.jpg"
+            />
+            <HomeCard
+              detail="Don't Waste Your Energy"
+              title="Run in Pegasus 41"
+              image="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg"
+            />
+            <HomeCard
+              detail="Look Good, Play Good"
+              title="Prime Time Gear"
+              image="https://cdn.pixabay.com/photo/2020/05/27/07/40/nike-5226090_1280.jpg"
+            />
           </section>
         </div>
       </div>
