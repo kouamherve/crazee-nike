@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Montserrat: "'Montserrat', sans-serif",
+        Lilita: "'Lilita One', sans-serif",
       },
       colors: {
         primary: "#FFFFFFB3",
