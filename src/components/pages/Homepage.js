@@ -1,8 +1,6 @@
 import { useState } from "react";
-import Navbar from "./navbar/Navbar";
 import MenuContext from "../../context/MenuContext";
 import AllMenu from "./navbar/menus/AllMenu";
-import HomeCard from "../reusable-ui/HomeCard";
 import Main from "./Main";
 
 export default function Homepage() {
