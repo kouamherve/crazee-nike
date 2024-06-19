@@ -11,7 +11,7 @@ export default function HomeCard({ detail, title, image }) {
           alt=""
         />
       </div>
-      <div className=" absolute bottom-0 p-6">
+      <div className=" absolute bottom-0 px-6 py-4">
         <div className=" text-white font-medium">
           <h3>{detail}</h3>
           <h2 className=" text-xl py-1">{title}</h2>
