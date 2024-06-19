@@ -1,7 +1,7 @@
 import { IoSearchOutline, IoBagOutline } from "react-icons/io5";
 import { FiUser, FiMenu } from "react-icons/fi";
 import { useContext } from "react";
-import MenuContext from "../../../context/MenuContext";
+import MenuContext from "../../../../context/MenuContext";
 
 export default function Menus() {
   const { setIsShow, isActiveMenu, setIsActiveMenu } = useContext(MenuContext);

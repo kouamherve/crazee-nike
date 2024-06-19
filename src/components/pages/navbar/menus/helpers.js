@@ -1,8 +1,8 @@
-import JordanMenu from "../jordan/JordanMenu";
-import KidsMenu from "../kids/KidsMenu";
-import MenMenu from "../men/MenMenu";
-import NewMenu from "../new & featured/NewMenu";
-import WomenMenu from "../women/WomenMenu";
+import JordanMenu from "./JordanMenu";
+import KidsMenu from "./KidsMenu";
+import MenMenu from "./MenMenu";
+import NewMenu from "./NewMenu";
+import WomenMenu from "./WomenMenu";
 
 export const allMenus = [
   // { id: 1, title: "running", content: <RunningMenu /> },

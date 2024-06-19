@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import Menus from "./Menus";
+import Menus from "./menus/Menus";
 
 export default function Navbar() {
   return (

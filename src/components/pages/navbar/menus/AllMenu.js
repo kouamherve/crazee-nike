@@ -1,11 +1,11 @@
 import { RxChevronRight } from "react-icons/rx";
-import ExtraProduct from "../../reusable-ui/ExtraProduct";
+import ExtraProduct from "../../../reusable-ui/ExtraProduct";
 import AllMenuForm from "./AllMenuForm";
 import AllMenuFooter from "./AllMenuFooter";
 import { allMenus } from "./helpers";
-import NavbarMenu from "../../reusable-ui/NavbarMenu";
+import NavbarMenu from "../../../reusable-ui/NavbarMenu";
 import { useContext, useState } from "react";
-import MenuContext from "../../../context/MenuContext";
+import MenuContext from "../../../../context/MenuContext";
 
 export default function AllMenu() {
   const [content, setContent] = useState("");
@@ -15,7 +15,7 @@ export default function AllMenu() {
   return (
     <NavbarMenu isHome="homepage">
       <div>
-        <div className="mt-4 py-6">
+        {/* <div className="mt-4 py-6">
           <ul className=" text-[22px] space-y-3">
             {allMenus.map((menu) => (
               <li key={menu.id}>
@@ -32,7 +32,7 @@ export default function AllMenu() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
         <div className="py-6 space-y-4">
           <ExtraProduct title="Jordan" />
           <ExtraProduct title="Converse" />
