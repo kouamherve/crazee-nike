@@ -6,12 +6,12 @@ export default function SecondSection() {
       <HomeCard
         detail="Just Dropped"
         title="The Aura Bag"
-        image="https://cdn.pixabay.com/photo/2016/08/30/14/10/bag-1630852_1280.jpg"
+        image="https://cdn.pixabay.com/photo/2015/04/24/20/57/girl-738302_1280.jpg"
       />
       <HomeCard
         detail="New Arrivals"
         title="Air Jordan 4 'Oxydized Green'"
-        image="https://cdn.pixabay.com/photo/2017/04/08/16/16/kicks-2213619_1280.jpg"
+        image="https://cdn.pixabay.com/photo/2020/09/17/06/28/sneakers-5578127_1280.jpg"
       />
       <HomeCard
         detail="Don't Waste Your Energy"

@@ -10,15 +10,17 @@ export default function FirstSection() {
           alt=""
         />
       </div>
-      <div className=" px-9 pt-4 pb-12 text-center">
-        <h1 className=" text-4xl py-2 tracking-tighter font-Lilita font-bold uppercase">
+      <div className=" px-9 pt-6 pb-12 text-center">
+        <h1 className=" text-4xl py-2 tracking-tighter font-Lilita font-medium uppercase">
           producer pack
         </h1>
         <p className=" p-2 font-medium">
           The Alchemist, Bink! and Metro Boomin highlight the natural connection
           between Hoop and Hip Hop with their own custom versions of the KD17.
         </p>
-        <Button className="bg-black border-black/60 text-white">Shop</Button>
+        <Button className=" mt-3 bg-black border-black/60 text-white">
+          Shop
+        </Button>
       </div>
     </section>
   );

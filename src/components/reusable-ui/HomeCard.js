@@ -6,7 +6,7 @@ export default function HomeCard({ detail, title, image }) {
     <div className="relative">
       <div className="h-[500px]">
         <img
-          className=" h-full w-full object-cover object-center brightness-[0.85]"
+          className=" h-full w-full object-cover object-center brightness-[0.80]"
           src={image}
           alt=""
         />

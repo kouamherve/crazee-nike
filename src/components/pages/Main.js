@@ -3,6 +3,7 @@ import Navbar from "./navbar/Navbar";
 import MenuContext from "../../context/MenuContext";
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
+import ThirdSection from "./ThirdSection";
 
 export default function Main() {
   const { isActiveMenu } = useContext(MenuContext);
@@ -13,6 +14,7 @@ export default function Main() {
         <Navbar />
         <FirstSection />
         <SecondSection />
+        <ThirdSection />
       </div>
     </div>
   );
