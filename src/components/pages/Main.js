@@ -5,6 +5,7 @@ import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
 import FourthSection from "./FourthSection";
+import FifthSection from "./FifthSection";
 
 export default function Main() {
   const { isActiveMenu } = useContext(MenuContext);
@@ -17,6 +18,7 @@ export default function Main() {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
+        <FifthSection />
       </div>
     </div>
   );
