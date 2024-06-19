@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../../../reusable-ui/Button";
 
 export default function AllMenuForm() {
   return (
@@ -13,12 +14,8 @@ export default function AllMenuForm() {
         </p>
       </div>
       <div className=" py-6 font-medium text-[15px] space-x-2">
-        <button className=" px-4 py-2 bg-black text-white rounded-full border-2 border-black/60">
-          Join Us
-        </button>
-        <button className=" px-4 py-2 bg-white text-black rounded-full border-2 border-secondary/60">
-          Sign In
-        </button>
+        <Button className="bg-black border-black/60 text-white">Join Us</Button>
+        <Button className=" bg-white border-secondary/60">Sign In</Button>
       </div>
     </form>
   );

@@ -1,3 +1,5 @@
+import Button from "../reusable-ui/Button";
+
 export default function FirstSection() {
   return (
     <section>
@@ -16,9 +18,7 @@ export default function FirstSection() {
           The Alchemist, Bink! and Metro Boomin highlight the natural connection
           between Hoop and Hip Hop with their own custom versions of the KD17.
         </p>
-        <button className=" my-5 px-4 py-2 bg-black text-white font-medium rounded-full border-2 border-black/60">
-          Shop
-        </button>
+        <Button className="bg-black border-black/60 text-white">Shop</Button>
       </div>
     </section>
   );

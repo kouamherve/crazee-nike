@@ -10,6 +10,7 @@ export default function Homepage() {
   const [isActiveMenu, setIsActiveMenu] = useState(false);
   const [isMenuPageShow, setIsMenuPageShow] = useState(false);
 
+  // Contexts
   const menuContextValue = {
     isShow,
     setIsShow,
