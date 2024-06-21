@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import Button from "../reusable-ui/Button";
+import ReactPlayer from "react-player/youtube";
 
 export default function ThirdSection() {
   return (
@@ -11,11 +13,15 @@ export default function ThirdSection() {
           Shop New Arrivals
         </Button>
       </div>
-      <div className=" pt-1 h-[452px]">
-        <img
-          className=" h-full w-full object-cover object-center"
-          src="https://cdn.pixabay.com/photo/2013/08/01/18/21/woman-169286_1280.jpg"
-          alt=""
+      <div className=" pt-1 h-[475px]">
+        <ReactPlayer
+          width={1000}
+          height={470}
+          playing
+          loop
+          autoplay
+          muted
+          url="https://www.youtube.com/watch?v=-R5GGT-j-Rk&pp=ygUNbmlrZSBzaG9wcGluZw%3D%3D"
         />
       </div>
     </section>
