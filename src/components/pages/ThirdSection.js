@@ -19,7 +19,7 @@ export default function ThirdSection() {
           height={470}
           playing
           loop
-          autoplay
+          autoPlay
           muted
           url="https://www.youtube.com/watch?v=-R5GGT-j-Rk&pp=ygUNbmlrZSBzaG9wcGluZw%3D%3D"
         />
