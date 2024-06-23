@@ -1,4 +1,4 @@
-import HomeCard from "../reusable-ui/HomeCard";
+import HomeCard from "../../reusable-ui/HomeCard";
 
 export default function SecondSection() {
   return (

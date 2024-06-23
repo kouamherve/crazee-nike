@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FooterCard from "../reusable-ui/FooterCard";
-import { resources } from "./navbar/menus/helpers";
+import FooterCard from "../../reusable-ui/FooterCard";
+import { resources } from "../navbar/menus/helpers";
 
 export default function Footer() {
   const [showDetail, setShowDetail] = useState(false);

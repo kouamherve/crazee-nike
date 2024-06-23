@@ -1,5 +1,5 @@
 import React from "react";
-import ClassicsCard from "../reusable-ui/ClassicsCard";
+import ClassicsCard from "../../reusable-ui/ClassicsCard";
 
 export default function FourthSection() {
   return (

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import Button from "../reusable-ui/Button";
+import Button from "../../reusable-ui/Button";
 import ReactPlayer from "react-player/youtube";
 
 export default function ThirdSection() {

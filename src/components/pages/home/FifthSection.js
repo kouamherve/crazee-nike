@@ -1,5 +1,5 @@
 import React from "react";
-import HomeCard from "../reusable-ui/HomeCard";
+import HomeCard from "../../reusable-ui/HomeCard";
 
 export default function FifthSection() {
   return (

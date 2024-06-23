@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import Navbar from "./navbar/Navbar";
-import MenuContext from "../../context/MenuContext";
+import MenuContext from "../../../context/MenuContext";
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
@@ -8,6 +7,7 @@ import FourthSection from "./FourthSection";
 import FifthSection from "./FifthSection";
 import UsefulLinks from "./UsefulLinks";
 import Footer from "./Footer";
+import Navbar from "../navbar/Navbar";
 
 export default function Main() {
   const { isActiveMenu } = useContext(MenuContext);

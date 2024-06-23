@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MenuContext from "../../context/MenuContext";
-import AllMenu from "./navbar/menus/AllMenu";
 import Main from "./Main";
+import AllMenu from "../navbar/menus/AllMenu";
+import MenuContext from "../../../context/MenuContext";
 
 export default function Homepage() {
   // States
