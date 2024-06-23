@@ -1,5 +1,3 @@
-import React, { useContext } from "react";
-import MenuContext from "../../../context/MenuContext";
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
@@ -8,13 +6,15 @@ import FifthSection from "./FifthSection";
 import UsefulLinks from "./UsefulLinks";
 import Footer from "./Footer";
 import Navbar from "../navbar/Navbar";
+import { useContext } from "react";
+import MenuContext from "../../../context/MenuContext";
 
 export default function Main() {
   const { isActiveMenu } = useContext(MenuContext);
 
   return (
     <div className=" relative font-Montserrat">
-      <div className={`${isActiveMenu ? "bg-secondary fixed w-full" : ""}`}>
+      <div className={`${isActiveMenu ? "fixed w-full" : ""}`}>
         <Navbar />
         <FirstSection />
         <SecondSection />

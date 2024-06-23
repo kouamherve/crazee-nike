@@ -34,3 +34,19 @@ export const promotions = [
   { detail: "First Responders & Medical Professionals" },
   { detail: "Birthday" },
 ];
+
+export const styles = [
+  { detail: "Crazee-Nike Adapt" },
+  { detail: "Crazee-Nike Air" },
+  { detail: "Crazee-Nike Air Force 1" },
+  { detail: "Crazee-Nike Air Max" },
+  { detail: "Crazee-Nike FlyEase" },
+  { detail: "Crazee-Nike Flyknit" },
+  { detail: "Crazee-Nike Flyleather" },
+  { detail: "Crazee-Nike Free" },
+  { detail: "Crazee-Nike Joyride" },
+  { detail: "Crazee-Nike React" },
+  { detail: "Crazee-Nike Vaporfly" },
+  { detail: "Crazee-Nike ZoomX" },
+  { detail: "Space Hippie" },
+];

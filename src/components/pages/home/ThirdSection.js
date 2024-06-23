@@ -15,8 +15,8 @@ export default function ThirdSection() {
       </div>
       <div className=" pt-1 h-[475px]">
         <ReactPlayer
-          width={1000}
-          height={470}
+          width={340}
+          height={475}
           playing
           loop
           autoPlay
