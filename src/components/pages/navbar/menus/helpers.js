@@ -12,12 +12,3 @@ export const allMenus = [
   { id: 4, title: "kids", content: <KidsMenu /> },
   { id: 5, title: "jordan", content: <JordanMenu /> },
 ];
-
-export const resources = [
-  { detail: "Gift Cards" },
-  { detail: "Find A Store" },
-  { detail: "Become A Member" },
-  { detail: "Crazee-Nike X Nba" },
-  { detail: "Crazee-Nike Journal" },
-  { detail: "Site Feedback" },
-];

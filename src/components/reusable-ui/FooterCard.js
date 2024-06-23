@@ -1,12 +1,13 @@
+import { useState } from "react";
 import { RxChevronUp, RxChevronDown } from "react-icons/rx";
 
-export default function FooterCard({
-  showDetail,
-  handleDetail,
-  resources,
-  title,
-  className,
-}) {
+export default function FooterCard({ resources, title, className }) {
+  const [showDetail, setShowDetail] = useState(false);
+
+  const handleDetail = (e) => {
+    e.stopPropagation();
+    setShowDetail(!showDetail);
+  };
   return (
     <div>
       <hr className={className} />
@@ -16,11 +17,11 @@ export default function FooterCard({
       >
         <h4 className=" text-sm font-medium capitalize">{title}</h4>
         <div className=" text-2xl cursor-pointer w-fit">
-          {showDetail ? <RxChevronDown /> : <RxChevronUp />}
+          {showDetail ? <RxChevronUp /> : <RxChevronDown />}
         </div>
       </div>
       {showDetail && (
-        <ul className=" text-secondary text-sm font-medium space-y-3">
+        <ul className=" pb-10 text-secondary text-sm font-medium space-y-3">
           {resources.map((res) => (
             <li key={res.detail}>{res.detail}</li>
           ))}
