@@ -1,33 +1,13 @@
-import FooterCard from "../../reusable-ui/FooterCard";
-import { companies, helps, promotions, resources } from "./helpers";
-import { TfiWorld } from "react-icons/tfi";
 import { RxChevronDown } from "react-icons/rx";
 import { PiCopyright } from "react-icons/pi";
+import SubFooter1 from "./SubFooter1";
 
 export default function Footer() {
-  const resource = resources;
-  const help = helps;
-  const company = companies;
-  const promotion = promotions;
-
   return (
     <div className="px-6 py-12">
       <div>
-        <FooterCard title="resources" resources={resource} className=" py-5" />
-        <FooterCard title="help" resources={help} className=" py-0" />
-        <FooterCard title="company" resources={company} className="py-0" />
-        <FooterCard
-          title="promotions & discounts"
-          resources={promotion}
-          className="py-0"
-        />
-        <div>
-          <hr />
-          <div className=" py-6 flex items-center gap-2">
-            <TfiWorld className=" text-2xl text-secondary" />
-            <h3 className=" text-base font-medium">United States</h3>
-          </div>
-        </div>
+        <SubFooter1 />
+
         <div>
           <hr className=" pb-6" />
           <ul className="text-sm text-secondary font-medium space-y-3">
