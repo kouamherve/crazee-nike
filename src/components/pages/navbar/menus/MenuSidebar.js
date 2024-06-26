@@ -6,7 +6,7 @@ import MenuContext from "../../../../context/MenuContext";
 import ExtraProduct from "../../../reusable-ui/ExtraProduct";
 import NavbarMenu from "../../../reusable-ui/NavbarMenu";
 
-export default function AllMenu() {
+export default function MenuSidebar() {
   const [content, setContent] = useState("");
   const { isHidden, setIsHidden } = useContext(MenuContext);
   if (isHidden) return <NavbarMenu isHome="other">{content}</NavbarMenu>;

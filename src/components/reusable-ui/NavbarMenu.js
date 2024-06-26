@@ -17,7 +17,7 @@ export default function NavbarMenu({ children, isHome }) {
     <div
       className={`${
         isShow
-          ? "z-30 font-Montserrat absolute top-0 right-0 bg-white w-80 min-h-screen px-6 overflow-y-auto"
+          ? "z-50 font-Montserrat absolute top-0 right-0 bg-white w-80 h-screen px-6 overflow-auto"
           : "hidden"
       } `}
     >

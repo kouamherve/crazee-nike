@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Main from "./Main";
-import AllMenu from "../navbar/menus/AllMenu";
 import MenuContext from "../../../context/MenuContext";
+import Navbar from "../navbar/Navbar";
+import MenuSidebar from "../navbar/menus/MenuSidebar";
 
 export default function Homepage() {
   // States
@@ -24,7 +25,8 @@ export default function Homepage() {
 
   return (
     <MenuContext.Provider value={menuContextValue}>
-      <AllMenu />
+      <MenuSidebar />
+      <Navbar />
       <Main />
     </MenuContext.Provider>
   );

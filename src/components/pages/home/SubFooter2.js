@@ -25,8 +25,8 @@ export default function SubFooter2() {
 
   return (
     <div className="relative">
-      <hr className=" pb-6" />
-      <ul className="text-sm text-secondary font-medium space-y-3">
+      <hr className=" pb-8" />
+      <ul className="text-[13px] text-secondary font-medium space-y-4">
         <li className="flex items-center gap-1">
           <PiCopyright />
           <h4>2024 Crazee-Nike, Inc. All Rights Reserved</h4>
@@ -36,7 +36,7 @@ export default function SubFooter2() {
             ref={ref}
             className=" absolute -top-[415px] h-fit w-fit bg-white px-4 py-5 rounded-lg shadow-xl"
           >
-            <ul className=" text-sm text-secondary font-medium space-y-3">
+            <ul className=" text-[13px] text-secondary font-medium space-y-3">
               {styles.map((style) => (
                 <li>{style.detail}</li>
               ))}
