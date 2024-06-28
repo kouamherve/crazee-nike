@@ -9,10 +9,19 @@ import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Main() {
-  const { isActiveMenu } = useContext(MenuContext);
+  const { isShow, position, divRef } = useContext(MenuContext);
 
   return (
-    <div className={`${isActiveMenu ? "relative" : ""} font-Montserrat`}>
+    <div
+      ref={divRef}
+      className={`font-Montserrat ${isShow ? "blur-sm fixed" : ""} `}
+      style={{
+        top: isShow ? `${position.top}px` : "auto",
+        left: isShow ? `${position.left}px` : "auto",
+        width: isShow ? "100%" : "auto",
+        zIndex: isShow ? 30 : "auto",
+      }}
+    >
       <FirstSection />
       <SecondSection />
       <ThirdSection />

@@ -4,10 +4,14 @@ import { useContext } from "react";
 import MenuContext from "../../../../context/MenuContext";
 
 export default function Menus() {
-  const { setIsShow, isActiveMenu, setIsActiveMenu } = useContext(MenuContext);
+  const { isShow, setIsShow, divRef, setPosition } = useContext(MenuContext);
+
   const handleClic = () => {
+    if (!isShow) {
+      const rect = divRef.current.getBoundingClientRect();
+      setPosition({ top: rect.top, left: rect.left });
+    }
     setIsShow(true);
-    setIsActiveMenu(true);
   };
 
   return (
@@ -22,7 +26,7 @@ export default function Menus() {
         <IoBagOutline />
       </div>
       <div onClick={handleClic} className=" text-[25px]">
-        <FiMenu className={`${isActiveMenu ? "hidden" : "cursor-pointer"}`} />
+        <FiMenu className=" cursor-pointer" />
       </div>
     </div>
   );

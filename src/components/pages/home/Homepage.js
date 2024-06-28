@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Main from "./Main";
 import MenuContext from "../../../context/MenuContext";
 import Navbar from "../navbar/Navbar";
@@ -8,8 +8,10 @@ export default function Homepage() {
   // States
   const [isShow, setIsShow] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [isActiveMenu, setIsActiveMenu] = useState(false);
   const [isMenuPageShow, setIsMenuPageShow] = useState(false);
+  const [position, setPosition] = useState({ top: 0, left: 0 });
+
+  const divRef = useRef(null);
 
   // Contexts
   const menuContextValue = {
@@ -19,8 +21,9 @@ export default function Homepage() {
     setIsMenuPageShow,
     isHidden,
     setIsHidden,
-    isActiveMenu,
-    setIsActiveMenu,
+    position,
+    setPosition,
+    divRef,
   };
 
   return (

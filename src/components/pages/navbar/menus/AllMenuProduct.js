@@ -9,7 +9,6 @@ export default function AllMenuProduct({ setContent, setIsHidden }) {
           <li key={menu.id}>
             <div
               onClick={() => {
-                setIsHidden(true);
                 setContent(menu.content);
               }}
               className="flex items-center justify-between"
