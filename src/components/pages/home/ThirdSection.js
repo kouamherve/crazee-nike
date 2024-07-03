@@ -11,7 +11,16 @@ export default function ThirdSection() {
           Shop New Arrivals
         </Button>
       </div>
-      <div className=" pt-1 h-[475px]"></div>
+      <div className=" pt-1 h-[475px]">
+        <video
+          className=" w-full h-full object-cover"
+          src="https://cdn.pixabay.com/video/2017/03/08/8257-207598619_large.mp4"
+          loop
+          muted
+          autoPlay
+          playsInline
+        />
+      </div>
     </section>
   );
 }
