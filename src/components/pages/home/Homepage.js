@@ -5,25 +5,20 @@ import Navbar from "../navbar/Navbar";
 import MenuSidebar from "../navbar/menus/MenuSidebar";
 
 export default function Homepage() {
-  // States
-  const [isShow, setIsShow] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [isMenuPageShow, setIsMenuPageShow] = useState(false);
-  const [position, setPosition] = useState({ top: 0, left: 0 });
+  const [isOpen, setIsOpen] = useState(false);
+  const [position, setPosition] = useState(0);
 
-  const divRef = useRef(null);
+  const ref = useRef(0);
 
-  // Contexts
   const menuContextValue = {
-    isShow,
-    setIsShow,
-    isMenuPageShow,
-    setIsMenuPageShow,
+    isOpen,
+    setIsOpen,
     isHidden,
     setIsHidden,
     position,
     setPosition,
-    divRef,
+    ref,
   };
 
   return (

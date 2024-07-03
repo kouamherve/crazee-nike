@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import Button from "../../reusable-ui/Button";
-import ReactPlayer from "react-player/youtube";
 
 export default function ThirdSection() {
   return (
@@ -13,17 +11,7 @@ export default function ThirdSection() {
           Shop New Arrivals
         </Button>
       </div>
-      <div className=" pt-1 h-[475px]">
-        <ReactPlayer
-          width={340}
-          height={475}
-          playing
-          loop
-          autoPlay
-          muted
-          url="https://www.youtube.com/watch?v=-R5GGT-j-Rk&pp=ygUNbmlrZSBzaG9wcGluZw%3D%3D"
-        />
-      </div>
+      <div className=" pt-1 h-[475px]"></div>
     </section>
   );
 }

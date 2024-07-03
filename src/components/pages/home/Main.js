@@ -9,18 +9,13 @@ import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Main() {
-  const { isShow, position, divRef } = useContext(MenuContext);
+  const { isOpen, ref } = useContext(MenuContext);
 
   return (
     <div
-      ref={divRef}
-      className={`font-Montserrat ${isShow ? "blur-sm fixed" : ""} `}
-      style={{
-        top: isShow ? `${position.top}px` : "auto",
-        left: isShow ? `${position.left}px` : "auto",
-        width: isShow ? "100%" : "auto",
-        zIndex: isShow ? 30 : "auto",
-      }}
+      id="mainContent"
+      ref={ref}
+      className={`font-Montserrat ${isOpen ? " overflow-hidden" : ""} `}
     >
       <FirstSection />
       <SecondSection />

@@ -13,7 +13,7 @@ export default function MenuSidebar() {
 
   return (
     <NavbarMenu isHome="homepage">
-      <div>
+      <div className="">
         <AllMenuProduct setContent={setContent} setIsHidden={setIsHidden} />
         <div className="py-6 space-y-4">
           <ExtraProduct title="Jordan" />
