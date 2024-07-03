@@ -19,29 +19,32 @@ export default function NavbarMenu({ children, isHome }) {
   return (
     <>
       {isOpen && (
-        <div
-          className={`absolute font-Montserrat bg-white top-0 right-0 bottom-0 border-l 
-        shadow-sm rounded-md w-80 px-6 z-50 h-screen overflow-y-auto`}
-        >
+        <>
+          <div className="fixed inset-0 bg-black/50 bg-blend-overlay z-40"></div>
           <div
-            className={`text-3xl py-6 w-full flex items-center ${
-              isHome === "homepage" ? "justify-end" : "justify-between"
-            }`}
+            className={`absolute font-Montserrat bg-white top-0 right-0 bottom-0 border-l 
+            shadow-sm rounded-md w-80 px-6 z-50 h-screen overflow-y-auto`}
           >
-            {isHome !== "homepage" && (
-              <Link>
-                <div className="flex items-center gap-2 -translate-x-4">
-                  <GoChevronLeft className=" text-2xl" />
-                  <span className=" text-lg font-medium">All</span>
-                </div>
-              </Link>
-            )}
-            <div onClick={handleClose}>
-              <VscClose className=" cursor-pointer" />
+            <div
+              className={`text-3xl py-6 w-full flex items-center ${
+                isHome === "homepage" ? "justify-end" : "justify-between"
+              }`}
+            >
+              {isHome !== "homepage" && (
+                <Link>
+                  <div className="flex items-center gap-2 -translate-x-4">
+                    <GoChevronLeft className=" text-2xl" />
+                    <span className=" text-lg font-medium">All</span>
+                  </div>
+                </Link>
+              )}
+              <div onClick={handleClose}>
+                <VscClose className=" cursor-pointer" />
+              </div>
             </div>
+            {children}
           </div>
-          {children}
-        </div>
+        </>
       )}
     </>
   );

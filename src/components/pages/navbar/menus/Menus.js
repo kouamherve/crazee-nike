@@ -6,7 +6,7 @@ import MenuContext from "../../../../context/MenuContext";
 export default function Menus() {
   const { setIsOpen, ref } = useContext(MenuContext);
 
-  const toggleMenu = () => {
+  const handleOpen = () => {
     ref.current = window.scrollY;
 
     document.getElementById("mainContent").style.position = "fixed";
@@ -28,7 +28,7 @@ export default function Menus() {
       <div className=" text-[22px]">
         <IoBagOutline />
       </div>
-      <div onClick={toggleMenu} className=" text-[25px]">
+      <div onClick={handleOpen} className=" text-[25px]">
         <FiMenu className=" cursor-pointer" />
       </div>
     </div>
