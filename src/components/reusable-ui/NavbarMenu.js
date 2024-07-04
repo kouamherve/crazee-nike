@@ -22,8 +22,8 @@ export default function NavbarMenu({ children, isHome }) {
         <>
           <div className="fixed inset-0 bg-black/50 bg-blend-overlay z-40"></div>
           <div
-            className={`absolute font-Montserrat bg-white top-0 right-0 bottom-0 border-l 
-            shadow-sm rounded-md w-80 px-6 z-50 h-screen overflow-y-auto`}
+            className={`absolute font-Montserrat bg-dark text-primary top-0 right-0 bottom-0 border-l 
+             border-dark shadow-sm rounded-md w-80 px-6 z-50 h-screen overflow-y-auto`}
           >
             <div
               className={`text-3xl py-6 w-full flex items-center ${

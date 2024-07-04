@@ -15,7 +15,9 @@ export default function Main() {
     <div
       id="mainContent"
       ref={ref}
-      className={`font-Montserrat ${isOpen ? " overflow-hidden" : ""} `}
+      className={`font-Montserrat bg-primary ${
+        isOpen ? " overflow-hidden" : ""
+      } `}
     >
       <FirstSection />
       <SecondSection />
