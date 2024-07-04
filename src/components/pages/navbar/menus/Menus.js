@@ -4,10 +4,17 @@ import { useContext } from "react";
 import MenuContext from "../../../../context/MenuContext";
 
 export default function Menus() {
-  const { setIsShow, isActiveMenu, setIsActiveMenu } = useContext(MenuContext);
-  const handleClic = () => {
-    setIsShow(true);
-    setIsActiveMenu(true);
+  const { setIsOpen, ref } = useContext(MenuContext);
+
+  const handleOpen = () => {
+    ref.current = window.scrollY;
+
+    document.getElementById("mainContent").style.position = "fixed";
+    document.getElementById("mainContent").style.top = `-${ref.current}px`;
+    document.getElementById("mainContent").style.width = "100%";
+    // document.body.style.overflow = "hidden";
+
+    setIsOpen(true);
   };
 
   return (
@@ -21,8 +28,8 @@ export default function Menus() {
       <div className=" text-[22px]">
         <IoBagOutline />
       </div>
-      <div onClick={handleClic} className=" text-[25px]">
-        <FiMenu className={`${isActiveMenu ? "hidden" : "cursor-pointer"}`} />
+      <div onClick={handleOpen} className=" text-[25px]">
+        <FiMenu className=" cursor-pointer" />
       </div>
     </div>
   );

@@ -1,12 +1,11 @@
 import { createContext } from "react";
 
 export default createContext({
-  isShow: true,
-  setIsShow: () => {},
-  isMenuPageShow: false,
-  setIsMenuPageShow: () => {},
+  isOpen: false,
+  setIsOpen: () => {},
   isHidden: false,
   setIsHidden: () => {},
-  isActiveMenu: false,
-  setIsActiveMenu: () => {},
+  ref: () => {},
+  position: 0,
+  setPosition: () => {},
 });

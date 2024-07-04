@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import Button from "../../reusable-ui/Button";
-import ReactPlayer from "react-player/youtube";
 
 export default function ThirdSection() {
   return (
@@ -14,14 +12,13 @@ export default function ThirdSection() {
         </Button>
       </div>
       <div className=" pt-1 h-[475px]">
-        <ReactPlayer
-          width={340}
-          height={475}
-          playing
+        <video
+          className=" w-full h-full object-cover"
+          src="https://cdn.pixabay.com/video/2017/03/08/8257-207598619_large.mp4"
           loop
-          autoPlay
           muted
-          url="https://www.youtube.com/watch?v=-R5GGT-j-Rk&pp=ygUNbmlrZSBzaG9wcGluZw%3D%3D"
+          autoPlay
+          playsInline
         />
       </div>
     </section>

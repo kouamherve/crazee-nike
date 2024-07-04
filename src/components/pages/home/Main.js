@@ -5,25 +5,25 @@ import FourthSection from "./FourthSection";
 import FifthSection from "./FifthSection";
 import UsefulLinks from "./UsefulLinks";
 import Footer from "./Footer";
-import Navbar from "../navbar/Navbar";
 import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Main() {
-  const { isActiveMenu } = useContext(MenuContext);
+  const { isOpen, ref } = useContext(MenuContext);
 
   return (
-    <div className=" relative font-Montserrat">
-      <div className={`${isActiveMenu ? "fixed w-full" : ""}`}>
-        <Navbar />
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
-        <FifthSection />
-        <UsefulLinks />
-        <Footer />
-      </div>
+    <div
+      id="mainContent"
+      ref={ref}
+      className={`font-Montserrat ${isOpen ? " overflow-hidden" : ""} `}
+    >
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection />
+      <FifthSection />
+      <UsefulLinks />
+      <Footer />
     </div>
   );
 }

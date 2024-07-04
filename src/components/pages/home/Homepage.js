@@ -1,30 +1,30 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Main from "./Main";
-import AllMenu from "../navbar/menus/AllMenu";
 import MenuContext from "../../../context/MenuContext";
+import Navbar from "../navbar/Navbar";
+import MenuSidebar from "../navbar/menus/MenuSidebar";
 
 export default function Homepage() {
-  // States
-  const [isShow, setIsShow] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [isActiveMenu, setIsActiveMenu] = useState(false);
-  const [isMenuPageShow, setIsMenuPageShow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [position, setPosition] = useState(0);
 
-  // Contexts
+  const ref = useRef(0);
+
   const menuContextValue = {
-    isShow,
-    setIsShow,
-    isMenuPageShow,
-    setIsMenuPageShow,
+    isOpen,
+    setIsOpen,
     isHidden,
     setIsHidden,
-    isActiveMenu,
-    setIsActiveMenu,
+    position,
+    setPosition,
+    ref,
   };
 
   return (
     <MenuContext.Provider value={menuContextValue}>
-      <AllMenu />
+      <MenuSidebar />
+      <Navbar />
       <Main />
     </MenuContext.Provider>
   );
