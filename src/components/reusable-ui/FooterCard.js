@@ -10,7 +10,7 @@ export default function FooterCard({ resources, title, className }) {
   };
   return (
     <div>
-      <hr className={className} />
+      <hr className={` border-secondary border-[0.5px] ${className}`} />
       <div
         onClick={handleDetail}
         className=" py-6 flex items-center justify-between"
@@ -21,7 +21,7 @@ export default function FooterCard({ resources, title, className }) {
         </div>
       </div>
       {showDetail && (
-        <ul className=" pb-10 text-secondary text-sm font-medium space-y-3">
+        <ul className=" pb-10 text-paragraph_color text-sm font-medium space-y-3">
           {resources.map((res) => (
             <li key={res.detail}>{res.detail}</li>
           ))}

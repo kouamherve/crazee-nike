@@ -3,7 +3,7 @@ import ClassicsCard from "../../reusable-ui/ClassicsCard";
 
 export default function ThirdSection() {
   return (
-    <div className="px-6 pb-20 bg-dark">
+    <div className="px-6 pb-20">
       <div className=" py-20 text-center text-white">
         <h3 className=" text-3xl font-medium ">
           Built to Compete Against the Best On Every Track, Court and Pitch

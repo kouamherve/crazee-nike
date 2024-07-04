@@ -2,7 +2,7 @@ import Button from "../../reusable-ui/Button";
 
 export default function SecondSection() {
   return (
-    <div className=" bg-dark">
+    <div>
       <div className="px-6 py-20 text-center text-white">
         <h1 className=" text-[40px] pb-2 tracking-tighter font-Lilita font-medium uppercase">
           Win on air
