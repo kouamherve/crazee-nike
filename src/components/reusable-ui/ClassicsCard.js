@@ -2,15 +2,17 @@ import React from "react";
 
 export default function ClassicsCard({ name, image }) {
   return (
-    <div className="relative py-5 h-80 w-[300px] mx-auto shrink-0">
-      <img
-        className="w-full h-full object-cover object-center"
-        src={image}
-        alt="Air Jordan"
-      />
-      <h3 className="absolute inset-0 pt-5 flex justify-center text-white text-xl font-medium">
+    <div className="relative mx-auto shrink-0 pt-6 pb-14">
+      <div className="h-[323px] w-[300px]">
+        <img
+          className="w-full h-full object-cover object-center"
+          src={image}
+          alt="Air Jordan"
+        />
+      </div>
+      <h4 className="absolute bottom-4 text-white text-lg font-medium">
         {name}
-      </h3>
+      </h4>
     </div>
   );
 }
