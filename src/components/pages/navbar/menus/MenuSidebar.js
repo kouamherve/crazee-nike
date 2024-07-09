@@ -15,7 +15,7 @@ export default function MenuSidebar() {
   return (
     <MenuSidebarCard>
       <div>
-        <AllMenuProduct setContent={setContent} />
+        <AllMenuProduct />
         <div className="py-6 space-y-4">
           <ExtraProduct title="Jordan" />
           <ExtraProduct title="Converse" />

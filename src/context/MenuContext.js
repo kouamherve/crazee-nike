@@ -8,4 +8,6 @@ export default createContext({
   ref: () => {},
   position: 0,
   setPosition: () => {},
+  showMenuItem: false,
+  setShowMenuItem: () => {},
 });

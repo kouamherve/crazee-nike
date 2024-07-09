@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import MenuItems from "./components/pages/navbar/menus/MenuItems";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
