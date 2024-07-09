@@ -14,7 +14,7 @@ export default function AllMenuProduct() {
             <div
               onClick={() => {
                 setShowMenuItem(true);
-                setContent(menu.title);
+                setContent(menu.content);
               }}
               className="flex items-center justify-between"
             >

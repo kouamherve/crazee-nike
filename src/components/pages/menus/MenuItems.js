@@ -33,9 +33,7 @@ export default function MenuItems() {
             </div>
           </div>
 
-          <div className=" pt-10">
-            <h2 className=" text-2xl font-medium capitalize">{content}</h2>
-          </div>
+          <div className=" pt-10">{content} </div>
         </div>
       )}
     </>
