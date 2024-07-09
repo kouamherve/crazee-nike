@@ -1,15 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import { allMenus } from "./helpers";
 import { RxChevronRight } from "react-icons/rx";
 import { useContext } from "react";
-import MenuContext from "../../../../context/MenuContext";
+import MenuContext from "../../../context/MenuContext";
 
 export default function AllMenuProduct() {
-  const { setShowMenuItem } = useContext(MenuContext);
-
-  const handleMenuItems = () => {
-    setShowMenuItem(true);
-  };
+  const { setShowMenuItem, setContent } = useContext(MenuContext);
 
   return (
     <div className="mt-4 py-6">
@@ -17,7 +12,10 @@ export default function AllMenuProduct() {
         {allMenus.map((menu) => (
           <li key={menu.id}>
             <div
-              onClick={handleMenuItems}
+              onClick={() => {
+                setShowMenuItem(true);
+                setContent(menu.title);
+              }}
               className="flex items-center justify-between"
             >
               <h3 className=" font-medium capitalize">{menu.title}</h3>

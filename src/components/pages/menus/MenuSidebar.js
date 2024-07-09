@@ -2,9 +2,9 @@ import AllMenuForm from "./AllMenuForm";
 import AllMenuFooter from "./AllMenuFooter";
 import { useContext, useState } from "react";
 import AllMenuProduct from "./AllMenuProduct";
-import MenuContext from "../../../../context/MenuContext";
-import ExtraProduct from "../../../reusable-ui/ExtraProduct";
-import MenuSidebarCard from "../../../reusable-ui/MenuSidebarCard";
+import MenuContext from "../../../context/MenuContext";
+import ExtraProduct from "../../reusable-ui/ExtraProduct";
+import MenuSidebarCard from "../../reusable-ui/MenuSidebarCard";
 
 export default function MenuSidebar() {
   const [content, setContent] = useState("");

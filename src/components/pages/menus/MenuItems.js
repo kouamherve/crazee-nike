@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import MenuContext from "../../../../context/MenuContext";
 import { GoChevronLeft } from "react-icons/go";
 import { VscClose } from "react-icons/vsc";
+import MenuContext from "../../../context/MenuContext";
 
 export default function MenuItems() {
-  const { showMenuItem, setShowMenuItem, isOpen } = useContext(MenuContext);
+  const { showMenuItem, setShowMenuItem, isOpen, content } =
+    useContext(MenuContext);
 
   const handleMenuItemClose = () => {
     setShowMenuItem(false);
@@ -21,20 +22,20 @@ export default function MenuItems() {
           <div
             className={`text-3xl py-6 w-full flex items-center justify-between`}
           >
-            <Link>
-              <div
-                onClick={handleMenuItemClose}
-                className="flex items-center gap-2 -translate-x-4"
-              >
+            <div onClick={handleMenuItemClose}>
+              <Link className="flex items-center gap-2 -translate-x-4">
                 <GoChevronLeft className=" text-2xl cursor-pointer" />
                 <span className=" text-lg font-medium">All</span>
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div>
               <VscClose className=" cursor-pointer" />
             </div>
           </div>
-          <h1>Menu Items</h1>
+
+          <div className=" pt-10">
+            <h2 className=" text-2xl font-medium capitalize">{content}</h2>
+          </div>
         </div>
       )}
     </>

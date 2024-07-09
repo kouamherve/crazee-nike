@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import Menus from "./menus/Menus";
+import Menus from "../menus/Menus";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);

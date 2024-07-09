@@ -10,4 +10,6 @@ export default createContext({
   setPosition: () => {},
   showMenuItem: false,
   setShowMenuItem: () => {},
+  content: "",
+  setContent: () => {},
 });
