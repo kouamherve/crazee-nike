@@ -1,7 +1,7 @@
 import { allMenus } from "./helpers";
 import { RxChevronRight } from "react-icons/rx";
 
-export default function AllMenuProduct({ setContent, setIsHidden }) {
+export default function AllMenuProduct({ setContent }) {
   return (
     <div className="mt-4 py-6">
       <ul className=" text-[22px] space-y-3">
