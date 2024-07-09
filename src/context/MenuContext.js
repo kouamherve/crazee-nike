@@ -12,4 +12,5 @@ export default createContext({
   setShowMenuItem: () => {},
   content: "",
   setContent: () => {},
+  handleClose: () => {},
 });

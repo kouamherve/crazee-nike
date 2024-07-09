@@ -3,16 +3,8 @@ import { useContext } from "react";
 import MenuContext from "../../context/MenuContext";
 
 export default function MenuSidebarCard({ children }) {
-  const { isOpen, setIsOpen, setIsHidden, ref } = useContext(MenuContext);
+  const { isOpen, handleClose } = useContext(MenuContext);
 
-  const handleClose = () => {
-    const mainContent = document.getElementById("mainContent");
-    mainContent.style.position = "";
-    mainContent.style.top = "";
-    window.scrollTo(0, ref.current);
-    setIsHidden(false);
-    setIsOpen(false);
-  };
   return (
     <>
       {isOpen && (

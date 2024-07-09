@@ -14,6 +14,15 @@ export default function Homepage() {
 
   const ref = useRef(0);
 
+  const handleClose = () => {
+    const mainContent = document.getElementById("mainContent");
+    mainContent.style.position = "";
+    mainContent.style.top = "";
+    window.scrollTo(0, ref.current);
+    setIsHidden(false);
+    setIsOpen(false);
+  };
+
   const menuContextValue = {
     isOpen,
     setIsOpen,
@@ -26,6 +35,7 @@ export default function Homepage() {
     setShowMenuItem,
     content,
     setContent,
+    handleClose,
   };
 
   return (

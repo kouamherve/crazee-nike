@@ -7,7 +7,9 @@ import ExtraProduct from "../../reusable-ui/ExtraProduct";
 import MenuSidebarCard from "../../reusable-ui/MenuSidebarCard";
 
 export default function MenuSidebar() {
+  // eslint-disable-next-line
   const [content, setContent] = useState("");
+
   const { isHidden } = useContext(MenuContext);
   if (isHidden)
     return <MenuSidebarCard isHome="other">{content}</MenuSidebarCard>;

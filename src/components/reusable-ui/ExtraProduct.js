@@ -3,7 +3,7 @@ import { SiJordan } from "react-icons/si";
 
 export default function ExtraProduct({ title }) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-3">
       {title === "Jordan" ? (
         <SiJordan className=" text-2xl" />
       ) : (

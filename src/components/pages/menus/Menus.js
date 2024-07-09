@@ -4,7 +4,7 @@ import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Menus() {
-  const { setIsOpen, ref } = useContext(MenuContext);
+  const { setIsOpen, ref, setShowMenuItem } = useContext(MenuContext);
 
   const handleOpen = () => {
     ref.current = window.scrollY;
@@ -15,6 +15,7 @@ export default function Menus() {
     // document.body.style.overflow = "hidden";
 
     setIsOpen(true);
+    setShowMenuItem(false);
   };
 
   return (

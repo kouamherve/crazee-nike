@@ -5,7 +5,7 @@ import { VscClose } from "react-icons/vsc";
 import MenuContext from "../../../context/MenuContext";
 
 export default function MenuItems() {
-  const { showMenuItem, setShowMenuItem, isOpen, content } =
+  const { showMenuItem, setShowMenuItem, isOpen, content, handleClose } =
     useContext(MenuContext);
 
   const handleMenuItemClose = () => {
@@ -28,12 +28,12 @@ export default function MenuItems() {
                 <span className=" text-lg font-medium">All</span>
               </Link>
             </div>
-            <div>
+            <div onClick={handleClose}>
               <VscClose className=" cursor-pointer" />
             </div>
           </div>
 
-          <div className=" pt-10">{content} </div>
+          <div className=" pt-4">{content} </div>
         </div>
       )}
     </>
