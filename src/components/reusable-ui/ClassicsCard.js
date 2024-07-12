@@ -10,7 +10,7 @@ export default function ClassicsCard({ name, image }) {
           alt="Air Jordan"
         />
       </div>
-      <h4 className="absolute bottom-4 text-white text-lg font-medium">
+      <h4 className="absolute bottom-4 text-dark text-lg font-medium">
         {name}
       </h4>
     </div>

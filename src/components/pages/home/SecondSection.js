@@ -3,7 +3,7 @@ import Button from "../../reusable-ui/Button";
 export default function SecondSection() {
   return (
     <div>
-      <div className="px-6 py-20 text-center text-white">
+      <div className="px-7 py-20 text-center text-dark">
         <h1 className=" text-[40px] pb-2 tracking-tighter font-Lilita font-medium uppercase">
           Win on air
         </h1>
@@ -11,11 +11,11 @@ export default function SecondSection() {
           Meet the next generation of Crazee-Nike Air. Engineered to the exact
           specifications of championship athletes.
         </p>
-        <div className=" space-x-2 pt-6 text-dark ">
-          <Button className=" bg-white border border-white">
+        <div className=" space-x-2 pt-6 text-white ">
+          <Button className=" bg-dark border border-dark">
             Experience Air
           </Button>
-          <Button className="  bg-white border border-white">Shop Air</Button>
+          <Button className="bg-dark border border-dark">Shop Air</Button>
         </div>
       </div>
       <div>

@@ -12,7 +12,9 @@ export default function Main() {
     <div
       id="mainContent"
       ref={ref}
-      className={`font-Montserrat bg-dark ${isOpen ? " overflow-hidden" : ""} `}
+      className={`font-Montserrat bg-white ${
+        isOpen ? " overflow-hidden" : ""
+      } `}
     >
       <div className=" pt-16"></div>
       <FirstSection />

@@ -3,22 +3,20 @@ import ClassicsCard from "../../reusable-ui/ClassicsCard";
 
 export default function ThirdSection() {
   return (
-    <div className="px-6 pb-20">
-      <div className=" py-20 text-center text-white">
+    <div className="px-7 pb-20">
+      <div className=" py-20 text-center">
         <h3 className=" text-3xl font-medium ">
           Built to Compete Against the Best On Every Track, Court and Pitch
         </h3>
-        <div className=" space-x-2 pt-6 text-dark ">
-          <Button className=" bg-white border border-white">
+        <div className=" space-x-2 pt-6 text-white ">
+          <Button className=" bg-dark border border-dark">
             Experience Air
           </Button>
-          <Button className="  bg-white border border-white">Shop Air</Button>
+          <Button className="  bg-dark border border-dark">Shop Air</Button>
         </div>
       </div>
       <div className=" pb-20">
-        <h3 className=" text-3xl text-white font-medium capitalize">
-          shop by category
-        </h3>
+        <h3 className=" text-3xl font-medium capitalize">shop by category</h3>
         <div className="flex gap-3 overflow-x-auto">
           <ClassicsCard
             name="Apparel"
@@ -35,9 +33,7 @@ export default function ThirdSection() {
         </div>
       </div>
       <div className="">
-        <h3 className=" text-3xl text-white font-medium capitalize">
-          shop air
-        </h3>
+        <h3 className=" text-3xl font-medium capitalize">shop air</h3>
         <div className="flex gap-3 overflow-x-auto">
           <ClassicsCard
             name="Crazee-Nike Alphafly 3"

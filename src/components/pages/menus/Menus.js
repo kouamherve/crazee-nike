@@ -19,7 +19,7 @@ export default function Menus() {
   };
 
   return (
-    <div className="flex gap-4 text-white">
+    <div className="flex gap-4 text-dark">
       <div className=" text-[22px]">
         <IoSearchOutline />
       </div>

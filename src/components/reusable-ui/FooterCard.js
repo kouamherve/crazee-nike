@@ -21,7 +21,7 @@ export default function FooterCard({ resources, title, className }) {
         </div>
       </div>
       {showDetail && (
-        <ul className=" pb-10 text-paragraph_color text-sm font-medium space-y-3">
+        <ul className=" pb-10 text-secondary text-sm font-medium space-y-3">
           {resources.map((res) => (
             <li key={res.detail}>{res.detail}</li>
           ))}

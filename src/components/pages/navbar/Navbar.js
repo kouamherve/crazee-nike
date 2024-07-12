@@ -31,13 +31,13 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <div className=" relative bg-dark">
+    <div className=" relative bg-white">
       <nav
         className={`fixed top-0 w-full transition-transform duration-300 ${
           showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
-        } z-30 h-16 font-Montserrat overflow-x-hidden bg-dark`}
+        } z-30 h-16 font-Montserrat overflow-x-hidden bg-white shadow-sm`}
       >
-        <div className="flex items-center justify-between px-6 py-4 shadow">
+        <div className="flex items-center justify-between px-7 py-4 shadow">
           <Logo />
           <Menus />
         </div>
