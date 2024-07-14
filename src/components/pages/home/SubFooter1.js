@@ -21,7 +21,7 @@ export default function SubFooter1() {
         />
       </div>
       <div>
-        <hr className="border-secondary border-[0.5px]" />
+        <hr className="border-backgroundHr border-[0.5px]" />
         <div className=" py-6 flex items-center gap-2 text-secondary">
           <TfiWorld className=" text-sm " />
           <h3 className=" text-sm font-medium ">United States</h3>

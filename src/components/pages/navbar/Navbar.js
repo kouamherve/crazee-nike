@@ -37,7 +37,7 @@ export default function Navbar() {
           showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
         } z-30 h-14 font-Montserrat overflow-x-hidden bg-white shadow-sm`}
       >
-        <div className="flex items-center justify-between px-7 py-4">
+        <div className="flex items-center justify-between px-6 py-4">
           <Logo />
           <Menus />
         </div>

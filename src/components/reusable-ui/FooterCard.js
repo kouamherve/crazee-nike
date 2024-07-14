@@ -10,7 +10,7 @@ export default function FooterCard({ resources, title, className }) {
   };
   return (
     <div>
-      <hr className={` border-secondary border-[0.5px] ${className}`} />
+      <hr className={` border-backgroundHr border-[0.5px] ${className}`} />
       <div
         onClick={handleDetail}
         className=" py-6 flex items-center justify-between"

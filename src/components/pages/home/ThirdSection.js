@@ -32,7 +32,7 @@ export default function ThirdSection() {
           />
         </div>
       </div>
-      <div className="">
+      <div>
         <h3 className=" text-3xl font-medium capitalize">shop air</h3>
         <div className="flex gap-3 overflow-x-auto">
           <ClassicsCard

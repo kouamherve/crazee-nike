@@ -25,7 +25,7 @@ export default function SubFooter2() {
 
   return (
     <div className="relative">
-      <hr className=" border-secondary border-[0.5px]" />
+      <hr className=" border-backgroundHr border-[0.5px]" />
       <ul className="pt-10 text-[13px] text-secondary font-medium space-y-4">
         <li className="flex items-center gap-1">
           <PiCopyright />

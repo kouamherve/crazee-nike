@@ -8,7 +8,7 @@ import { Carousel } from "flowbite-react";
 
 export default function NewAndFeatured() {
   return (
-    <>
+    <div className="font-Montserrat">
       <Navbar />
       <div className=" bg-white pt-14"></div>
       <div className="h-20 w-full bg-zinc-100 text-xs font-semibold">
@@ -30,10 +30,10 @@ export default function NewAndFeatured() {
         </Carousel>
       </div>
 
-      <div className=" font-Montserrat pb-24">
+      <div className="pb-28">
         <h2 className=" py-8 px-7 text-xl font-semibold">New Releases</h2>
         <div className="">
-          <ul className=" flex gap-8 text-base font-semibold text-nowrap overflow-x-auto py-4">
+          <ul className=" flex gap-8 text-base font-semibold text-nowrap overflow-x-auto no-scrollbar py-4">
             <li>Shoes</li>
             <li>Tops & T-Shirts</li>
             <li>Shorts</li>
@@ -95,7 +95,63 @@ export default function NewAndFeatured() {
           </div>
         </div>
       </div>
+      <hr className=" border-backgroundHr border-[0.5px]" />
+      <div className="pt-20">
+        <h3 className=" text-xl font-medium px-6">Related Categories</h3>
+        <div className=" pt-6 pb-10 w-full text-xs font-semibold flex gap-2 text-nowrap overflow-x-auto no-scrollbar bg-white">
+          <div className="flex h-full items-center justify-center">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              Best Selling Products
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              Best Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              New Basketball Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              New Soccer Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              New Men's Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              New Running Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              Best Men's Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              New Jordan Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              Best Women's Shoes
+            </Button>
+          </div>
+          <div className="flex h-full items-center justify-center ">
+            <Button className=" border-[0.5px] border-black font-semibold px-4">
+              Best Training & Gym
+            </Button>
+          </div>
+        </div>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
