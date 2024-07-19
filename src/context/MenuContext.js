@@ -13,6 +13,4 @@ export default createContext({
   content: "",
   setContent: () => {},
   handleClose: () => {},
-  showNavbar: true,
-  setShowNavbar: () => {},
 });

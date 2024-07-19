@@ -4,36 +4,13 @@ import Button from "../../../reusable-ui/Button";
 import { products } from "./Product";
 import Footer from "../../home/Footer";
 import { Carousel } from "flowbite-react";
-import { useContext, useEffect, useState } from "react";
-import MenuContext from "../../../../context/MenuContext";
+import { useEffect, useState } from "react";
+import { useNavbarVisibility } from "../../../../hooks/useNavbarVisibility";
 
 export default function NewAndFeatured() {
   const [isAtTop, setIsAtTop] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY === 0) {
-        setShowNavbar(true);
-      } else if (window.scrollY > lastScrollY) {
-        setShowNavbar(false);
-      } else {
-        setShowNavbar(true);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
+  const showNavbar = useNavbarVisibility();
 
   useEffect(() => {
     const handleScroll = () => {
