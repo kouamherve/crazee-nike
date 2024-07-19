@@ -7,6 +7,8 @@ import { Carousel } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useNavbarVisibility } from "../../../../hooks/useNavbarVisibility";
 import NavbarSticky from "./NavbarSticky";
+import ReleasesFilter from "./ReleasesFilter";
+import PickUpFeatured from "./PickUpFeatured";
 
 export default function NewAndFeatured() {
   const [isAtTop, setIsAtTop] = useState(false);
@@ -56,25 +58,10 @@ export default function NewAndFeatured() {
         <div className="pb-28">
           <NavbarSticky showNavbar={showNavbar} isAtTop={isAtTop} />
 
-          <div className="">
-            <ul className=" flex gap-8 text-base font-semibold text-nowrap overflow-x-auto no-scrollbar py-4">
-              <li>Shoes</li>
-              <li>Tops & T-Shirts</li>
-              <li>Shorts</li>
-              <li>Hoodies & Pullovers</li>
-              <li>Jackets & Vests</li>
-              <li>Pants & Tights</li>
-              <li>Swimming</li>
-              <li>Socks</li>
-              <li>Accessories & Equipment</li>
-            </ul>
-          </div>
-          <div className="p-5 border-[0.5px] border-y-black flex items-center justify-between">
-            <span className=" font-medium">Pick Up Today</span>
-            <div className=" h-10 w-16 p-[2px] bg-paragraph_color/50 rounded-full flex items-center overflow-hidden shadow-sm">
-              <span className=" size-9 rounded-full bg-white shadow-sm"></span>
-            </div>
-          </div>
+          <ReleasesFilter />
+
+          <PickUpFeatured />
+
           <div>
             <div className="px-5 py-4 flex items-center justify-between">
               <span className=" text-secondary">
