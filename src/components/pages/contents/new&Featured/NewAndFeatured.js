@@ -6,6 +6,7 @@ import Footer from "../../home/Footer";
 import { Carousel } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useNavbarVisibility } from "../../../../hooks/useNavbarVisibility";
+import NavbarSticky from "./NavbarSticky";
 
 export default function NewAndFeatured() {
   const [isAtTop, setIsAtTop] = useState(false);
@@ -53,19 +54,7 @@ export default function NewAndFeatured() {
 
       <div>
         <div className="pb-28">
-          <div
-            className={`${
-              showNavbar ? "top-14" : "top-0"
-            } sticky bg-white font-semibold h-14 flex items-center px-5 my-8 transition-all duration-300 ease-in `}
-          >
-            <h3
-              className={`transition-all duration-300 ease-out ${
-                isAtTop ? "text-xs" : "text-base"
-              }`}
-            >
-              New Releases
-            </h3>
-          </div>
+          <NavbarSticky showNavbar={showNavbar} isAtTop={isAtTop} />
 
           <div className="">
             <ul className=" flex gap-8 text-base font-semibold text-nowrap overflow-x-auto no-scrollbar py-4">
