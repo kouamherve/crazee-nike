@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RxChevronUp, RxChevronDown } from "react-icons/rx";
 
 export default function FooterCard({ resources, title, className }) {
   const [showDetail, setShowDetail] = useState(false);
 
+  useEffect(() => {
+    if (title.toLowerCase() === "resources") {
+      setShowDetail(true);
+    }
+  }, [title]);
+
   const handleDetail = (e) => {
     e.stopPropagation();
     setShowDetail(!showDetail);
   };
+
   return (
     <div>
       <hr className={` border-backgroundHr border-[0.5px] ${className}`} />
@@ -20,13 +27,15 @@ export default function FooterCard({ resources, title, className }) {
           {showDetail ? <RxChevronUp /> : <RxChevronDown />}
         </div>
       </div>
-      {showDetail && (
-        <ul className=" pb-10 text-secondary text-sm font-medium space-y-3">
-          {resources.map((res) => (
-            <li key={res.detail}>{res.detail}</li>
-          ))}
-        </ul>
-      )}
+      <div>
+        {showDetail && (
+          <ul className=" pb-10 text-secondary text-sm font-medium space-y-3">
+            {resources.map((res) => (
+              <li key={res.detail}>{res.detail}</li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }

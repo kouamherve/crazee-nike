@@ -11,6 +11,7 @@ export default function Homepage() {
   const [isOpen, setIsOpen] = useState(false);
   const [position, setPosition] = useState(0);
   const [content, setContent] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   const ref = useRef(0);
 
@@ -36,6 +37,8 @@ export default function Homepage() {
     content,
     setContent,
     handleClose,
+    isVisible,
+    setIsVisible,
   };
 
   return (

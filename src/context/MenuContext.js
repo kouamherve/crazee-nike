@@ -13,4 +13,6 @@ export default createContext({
   content: "",
   setContent: () => {},
   handleClose: () => {},
+  isVisible: false,
+  setIsVisible: () => {},
 });
