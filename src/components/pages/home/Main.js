@@ -16,7 +16,7 @@ export default function Main() {
         isOpen ? " overflow-hidden" : ""
       } `}
     >
-      <div className=" pt-16"></div>
+      <div className=" pt-14"></div>
       <FirstSection />
       <SecondSection />
       <ThirdSection />

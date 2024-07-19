@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import Navbar from "../../navbar/Navbar";
 import { IoFilter } from "react-icons/io5";
 import Button from "../../../reusable-ui/Button";
@@ -10,8 +9,6 @@ import MenuContext from "../../../../context/MenuContext";
 
 export default function NewAndFeatured() {
   const [isAtTop, setIsAtTop] = useState(false);
-  // const { isVisible } = useContext(MenuContext);
-
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -48,9 +45,7 @@ export default function NewAndFeatured() {
         setIsAtTop(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useRef, useState } from "react";
 import Main from "./Main";
 import MenuContext from "../../../context/MenuContext";
 import Navbar from "../navbar/Navbar";
@@ -11,7 +12,6 @@ export default function Homepage() {
   const [isOpen, setIsOpen] = useState(false);
   const [position, setPosition] = useState(0);
   const [content, setContent] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
 
   const ref = useRef(0);
 
@@ -23,6 +23,31 @@ export default function Homepage() {
     setIsHidden(false);
     setIsOpen(false);
   };
+
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY === 0) {
+        setShowNavbar(true);
+      } else if (window.scrollY > lastScrollY) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
 
   const menuContextValue = {
     isOpen,
@@ -37,15 +62,15 @@ export default function Homepage() {
     content,
     setContent,
     handleClose,
-    isVisible,
-    setIsVisible,
+    showNavbar,
+    setShowNavbar,
   };
 
   return (
     <MenuContext.Provider value={menuContextValue}>
       <MenuSidebar />
       <MenuItems />
-      <Navbar />
+      <Navbar showNavbar={showNavbar} />
       <Main />
     </MenuContext.Provider>
   );
