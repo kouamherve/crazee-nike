@@ -7,7 +7,7 @@ import RelatedCategoriesFeatured from "./RelatedCategoriesFeatured";
 export default function MainFeatured({ showNavbar, isAtTop }) {
   return (
     <>
-      <div className="pb-28">
+      <div className="pb-28 w-full">
         <NavbarSticky showNavbar={showNavbar} isAtTop={isAtTop} />
 
         <ReleasesFilter />
@@ -16,6 +16,7 @@ export default function MainFeatured({ showNavbar, isAtTop }) {
 
         <Products />
       </div>
+
       <RelatedCategoriesFeatured />
     </>
   );

@@ -21,6 +21,7 @@ export default function NewAndFeatured() {
         setIsAtTop(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -28,10 +29,10 @@ export default function NewAndFeatured() {
   }, []);
 
   return (
-    <div className="font-Montserrat">
+    <div className="font-Montserrat w-full">
       <Navbar showNavbar={showNavbar} />
 
-      <div className=" bg-white pt-14"></div>
+      <div className=" bg-white pt-14 w-full"></div>
 
       <CarouselFeatured />
 
