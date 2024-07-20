@@ -1,24 +1,12 @@
-import React from "react";
 import { products } from "./Product";
-import { IoFilter } from "react-icons/io5";
-import Button from "../../../reusable-ui/Button";
+import ProductFilter from "./ProductFilter";
 
 export default function Products() {
   return (
     <div>
-      <div className="px-5 py-4 flex items-center justify-between">
-        <span className=" text-secondary">
-          {products.length === 0 || products.length === 1
-            ? `${products.length} Result`
-            : `${products.length} Results`}
-        </span>
-        <Button className=" py-0 px-5 bg-white font-semibold flex items-center justify-between gap-2 rounded-full border border-secondary/50">
-          <span>Filter</span>
-          <IoFilter />
-        </Button>
-      </div>
+      <ProductFilter />
 
-      <div className=" grid grid-cols-2 gap-y-4 w-full">
+      <div className=" grid grid-cols-2 gap-4 w-full">
         {products.map((product) => (
           <div key={product.id}>
             <div className=" bg-img size-48">

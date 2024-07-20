@@ -3,8 +3,8 @@ import Footer from "../../home/Footer";
 import { useEffect, useState } from "react";
 import { useNavbarVisibility } from "../../../../hooks/useNavbarVisibility";
 
-import Main from "./Main";
 import CarouselFeatured from "./CarouselFeatured";
+import MainFeatured from "./MainFeatured";
 
 export default function NewAndFeatured() {
   const [isAtTop, setIsAtTop] = useState(false);
@@ -35,7 +35,7 @@ export default function NewAndFeatured() {
 
       <CarouselFeatured />
 
-      <Main showNavbar={showNavbar} isAtTop={isAtTop} />
+      <MainFeatured showNavbar={showNavbar} isAtTop={isAtTop} />
 
       <Footer />
     </div>

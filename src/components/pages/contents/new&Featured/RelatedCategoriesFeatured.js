@@ -1,21 +1,8 @@
-import NavbarSticky from "./NavbarSticky";
-import ReleasesFilter from "./ReleasesFilter";
-import PickUpFeatured from "./PickUpFeatured";
-import Products from "./Products";
 import Button from "../../../reusable-ui/Button";
 
-export default function Main({ showNavbar, isAtTop }) {
+export default function RelatedCategoriesFeatured() {
   return (
     <>
-      <div className="pb-28">
-        <NavbarSticky showNavbar={showNavbar} isAtTop={isAtTop} />
-
-        <ReleasesFilter />
-
-        <PickUpFeatured />
-
-        <Products />
-      </div>
       <hr className=" border-backgroundHr border-[0.5px]" />
       <div className="pt-20">
         <h3 className=" text-xl font-medium px-6">Related Categories</h3>
