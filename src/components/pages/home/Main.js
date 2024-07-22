@@ -6,12 +6,12 @@ import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Main() {
-  const { isOpen, ref } = useContext(MenuContext);
+  const { isOpen, mainRef } = useContext(MenuContext);
 
   return (
     <div
       id="mainContent"
-      ref={ref}
+      ref={mainRef}
       className={`font-Montserrat bg-white ${
         isOpen ? " overflow-hidden" : ""
       } `}

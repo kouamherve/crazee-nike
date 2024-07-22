@@ -4,15 +4,15 @@ import { useContext } from "react";
 import MenuContext from "../../../context/MenuContext";
 
 export default function Menus() {
-  const { setIsOpen, ref, setShowMenuItem } = useContext(MenuContext);
+  const { setIsOpen, ref, mainRef, setShowMenuItem } = useContext(MenuContext);
 
   const handleOpen = () => {
     ref.current = window.scrollY;
+    const main = mainRef.current;
 
-    document.getElementById("mainContent").style.position = "fixed";
-    document.getElementById("mainContent").style.top = `-${ref.current}px`;
-    document.getElementById("mainContent").style.width = "100%";
-    // document.body.style.overflow = "hidden";
+    main.style.position = "fixed";
+    main.style.top = `-${ref.current}px`;
+    main.style.width = "100%";
 
     setIsOpen(true);
     setShowMenuItem(false);

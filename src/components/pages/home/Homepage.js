@@ -14,13 +14,18 @@ export default function Homepage() {
   const [content, setContent] = useState("");
 
   const ref = useRef(0);
+  const mainRef = useRef(0);
+
   const showNavbar = useNavbarVisibility();
 
   const handleClose = () => {
-    const mainContent = document.getElementById("mainContent");
+    const mainContent = mainRef.current;
+
     mainContent.style.position = "";
     mainContent.style.top = "";
+
     window.scrollTo(0, ref.current);
+
     setIsHidden(false);
     setIsOpen(false);
   };
@@ -33,6 +38,7 @@ export default function Homepage() {
     position,
     setPosition,
     ref,
+    mainRef,
     showMenuItem,
     setShowMenuItem,
     content,

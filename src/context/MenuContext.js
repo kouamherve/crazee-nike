@@ -6,6 +6,7 @@ export default createContext({
   isHidden: false,
   setIsHidden: () => {},
   ref: () => {},
+  mainRef: () => {},
   position: 0,
   setPosition: () => {},
   showMenuItem: false,
