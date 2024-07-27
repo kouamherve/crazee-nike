@@ -38,7 +38,7 @@ export default function SubFooter2() {
           >
             <ul className=" text-[13px] text-secondary font-medium space-y-3">
               {styles.map((style) => (
-                <li>{style.detail}</li>
+                <li key={style.detail}>{style.detail}</li>
               ))}
             </ul>
           </div>

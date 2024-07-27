@@ -16,19 +16,19 @@ export default function Products() {
                 alt={product.title}
               />
             </div>
-            <div className="px-3 py-2 text-[13px]">
+            <div className="px-3 py-2 text-[13px] space-y-[0.5px]">
               <span className=" text-pub font-semibold">
                 {product.justIn ? "Just In" : ""}
               </span>
               <h4 className=" font-semibold">{product.title}</h4>
-              <p>{product.category}</p>
+              <p className="text-secondary">{product.category}</p>
               <div className="flex flex-col text-secondary">
                 <span>
                   {product.colors === 0 || product.colors === 1
                     ? `${product.colors} Color`
                     : `${product.colors} Colors`}
                 </span>
-                <span className=" font-medium text-black text-base pt-2">
+                <span className=" font-medium text-black text-base pt-[10px]">
                   $ {product.price}
                 </span>
               </div>

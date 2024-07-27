@@ -30,9 +30,8 @@ export default function NewAndFeatured() {
 
   return (
     <div className="font-Montserrat w-full">
-      <Navbar showNavbar={showNavbar} />
-
       <div className=" bg-white pt-[60px] w-full"></div>
+      <Navbar showNavbar={showNavbar} />
 
       <CarouselFeatured />
 

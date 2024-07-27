@@ -12,6 +12,7 @@ export const theme = {
       primary: "#FFFFFFB3",
       secondary: "#707072",
       backgroundHr: "#E5E5E5",
+      backgroundButtonFilter: "#CACACB",
       paragraph_color: "#9E9EA0",
       dark: "#1F1F21",
       img: "#F5F5F5",
