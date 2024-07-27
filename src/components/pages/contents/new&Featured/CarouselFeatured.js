@@ -2,7 +2,7 @@ import { Carousel } from "flowbite-react";
 
 export default function CarouselFeatured() {
   return (
-    <div className="h-20 w-full bg-zinc-100 text-xs font-semibold">
+    <div className="h-[60px] w-full bg-zinc-100 text-xs font-semibold font-sans text-black/80">
       <Carousel
         indicators={false}
         pauseOnHover
