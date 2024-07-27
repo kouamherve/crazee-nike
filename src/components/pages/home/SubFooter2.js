@@ -25,8 +25,8 @@ export default function SubFooter2() {
 
   return (
     <div className="relative">
-      <hr className=" pb-8" />
-      <ul className="text-[13px] text-secondary font-medium space-y-4">
+      <hr className=" border-backgroundHr border-[0.5px]" />
+      <ul className="pt-10 text-[13px] text-secondary font-medium space-y-4">
         <li className="flex items-center gap-1">
           <PiCopyright />
           <h4>2024 Crazee-Nike, Inc. All Rights Reserved</h4>
@@ -34,11 +34,11 @@ export default function SubFooter2() {
         {showGuideMenu && (
           <div
             ref={ref}
-            className=" absolute -top-[415px] h-fit w-fit bg-white px-4 py-5 rounded-lg shadow-xl"
+            className=" absolute -top-[415px] h-fit w-fit bg-white border-[0.5px] border-secondary px-4 py-5 rounded-lg shadow-md"
           >
             <ul className=" text-[13px] text-secondary font-medium space-y-3">
               {styles.map((style) => (
-                <li>{style.detail}</li>
+                <li key={style.detail}>{style.detail}</li>
               ))}
             </ul>
           </div>
@@ -57,9 +57,9 @@ export default function SubFooter2() {
         <li>Terms Of Sale</li>
         <li>Terms Of Use</li>
         <li>Crazee-Nike Privacy Policy</li>
-        <li className="flex gap-1">
+        <li className="flex items-center gap-2">
           <img
-            className=" size-[22px]"
+            className=" size-[24px] object-contain"
             src="./assets/privacy_choices.png"
             alt="privacy choices"
           />

@@ -1,13 +1,15 @@
 import Logo from "./Logo";
-import Menus from "./menus/Menus";
+import Menus from "../menus/Menus";
 
-export default function Navbar() {
+export default function Navbar({ showNavbar }) {
   return (
-    <div className=" relative">
+    <div className=" relative bg-white ">
       <nav
-        className={` w-full fixed z-30 font-Montserrat bg-white overflow-x-hidden`}
+        className={`${
+          showNavbar ? " translate-y-0" : " -translate-y-full"
+        } fixed top-0 w-full z-30 font-Montserrat overflow-x-hidden bg-white`}
       >
-        <div className="flex items-center justify-between px-6 py-5 shadow">
+        <div className="flex items-center justify-between p-5">
           <Logo />
           <Menus />
         </div>

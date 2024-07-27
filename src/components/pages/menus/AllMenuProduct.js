@@ -1,14 +1,19 @@
 import { allMenus } from "./helpers";
 import { RxChevronRight } from "react-icons/rx";
+import { useContext } from "react";
+import MenuContext from "../../../context/MenuContext";
 
-export default function AllMenuProduct({ setContent, setIsHidden }) {
+export default function AllMenuProduct() {
+  const { setShowMenuItem, setContent } = useContext(MenuContext);
+
   return (
-    <div className="mt-4 py-6">
+    <div className="pt-4 pb-10">
       <ul className=" text-[22px] space-y-3">
         {allMenus.map((menu) => (
           <li key={menu.id}>
             <div
               onClick={() => {
+                setShowMenuItem(true);
                 setContent(menu.content);
               }}
               className="flex items-center justify-between"

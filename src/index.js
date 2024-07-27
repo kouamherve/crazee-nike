@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import NewAndFeatured from "./components/pages/contents/new&Featured/NewAndFeatured";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     // errorElement: <ErrorPage />,
+  },
+  {
+    path: "new",
+    element: <NewAndFeatured />,
   },
 ]);
 

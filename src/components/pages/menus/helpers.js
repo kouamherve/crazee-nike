@@ -5,7 +5,6 @@ import NewMenu from "./NewMenu";
 import WomenMenu from "./WomenMenu";
 
 export const allMenus = [
-  // { id: 1, title: "running", content: <RunningMenu /> },
   { id: 1, title: "new & featured", content: <NewMenu /> },
   { id: 2, title: "men", content: <MenMenu /> },
   { id: 3, title: "women", content: <WomenMenu /> },

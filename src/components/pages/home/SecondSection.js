@@ -1,32 +1,39 @@
-import HomeCard from "../../reusable-ui/HomeCard";
+import Button from "../../reusable-ui/Button";
 
 export default function SecondSection() {
   return (
-    <section>
-      <HomeCard
-        className=" h-[500px]"
-        detail="Just Dropped"
-        title="The Aura Bag"
-        image="https://cdn.pixabay.com/photo/2015/04/24/20/57/girl-738302_1280.jpg"
-      />
-      <HomeCard
-        className=" h-[500px]"
-        detail="New Arrivals"
-        title="Air Jordan 4 'Oxidized Green'"
-        image="https://cdn.pixabay.com/photo/2020/09/17/06/28/sneakers-5578127_1280.jpg"
-      />
-      <HomeCard
-        className=" h-[500px]"
-        detail="Don't Waste Your Energy"
-        title="Run in Pegasus 41"
-        image="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg"
-      />
-      <HomeCard
-        className=" h-[500px]"
-        detail="Look Good, Play Good"
-        title="Prime Time Gear"
-        image="https://cdn.pixabay.com/photo/2020/05/27/07/40/nike-5226090_1280.jpg"
-      />
-    </section>
+    <div>
+      <div className="px-7 py-20 text-center text-dark">
+        <h1 className=" text-[40px] pb-2 tracking-tighter font-Lilita font-medium uppercase">
+          Win on air
+        </h1>
+        <p className="px-2 font-medium">
+          Meet the next generation of Crazee-Nike Air. Engineered to the exact
+          specifications of championship athletes.
+        </p>
+        <div className=" space-x-2 pt-6 text-white ">
+          <Button className=" bg-dark border border-dark">
+            Experience Air
+          </Button>
+          <Button className="bg-dark border border-dark">Shop Air</Button>
+        </div>
+      </div>
+      <div>
+        <div className="w-full h-[450px]">
+          <img
+            className=" w-full h-full object-cover object-center"
+            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_493,c_limit/a3babaed-553e-4f7e-a3fd-422df398ae29/nike-just-do-it.jpg"
+            alt=""
+          />
+        </div>
+        <div className="flex w-full h-[300px]">
+          <img
+            className=" w-full h-full object-cover object-center"
+            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/w_411,c_limit/e5d0ee1a-bc86-4242-895f-abc809f16a05/nike-just-do-it.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
   );
 }

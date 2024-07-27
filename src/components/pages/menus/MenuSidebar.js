@@ -2,19 +2,22 @@ import AllMenuForm from "./AllMenuForm";
 import AllMenuFooter from "./AllMenuFooter";
 import { useContext, useState } from "react";
 import AllMenuProduct from "./AllMenuProduct";
-import MenuContext from "../../../../context/MenuContext";
-import ExtraProduct from "../../../reusable-ui/ExtraProduct";
-import NavbarMenu from "../../../reusable-ui/NavbarMenu";
+import MenuContext from "../../../context/MenuContext";
+import ExtraProduct from "../../reusable-ui/ExtraProduct";
+import MenuSidebarCard from "../../reusable-ui/MenuSidebarCard";
 
 export default function MenuSidebar() {
+  // eslint-disable-next-line
   const [content, setContent] = useState("");
-  const { isHidden, setIsHidden } = useContext(MenuContext);
-  if (isHidden) return <NavbarMenu isHome="other">{content}</NavbarMenu>;
+
+  const { isHidden } = useContext(MenuContext);
+  if (isHidden)
+    return <MenuSidebarCard isHome="other">{content}</MenuSidebarCard>;
 
   return (
-    <NavbarMenu isHome="homepage">
-      <div className="">
-        <AllMenuProduct setContent={setContent} setIsHidden={setIsHidden} />
+    <MenuSidebarCard>
+      <div>
+        <AllMenuProduct />
         <div className="py-6 space-y-4">
           <ExtraProduct title="Jordan" />
           <ExtraProduct title="Converse" />
@@ -22,6 +25,6 @@ export default function MenuSidebar() {
         <AllMenuForm />
         <AllMenuFooter />
       </div>
-    </NavbarMenu>
+    </MenuSidebarCard>
   );
 }
